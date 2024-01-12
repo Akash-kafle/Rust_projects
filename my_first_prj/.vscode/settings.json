@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\learning_rust\\370bfe7fe6f18012\\Cargo.toml",
+        ".\\learning_rust\\370bfe7fe6f18012\\codecrafters-bittorrent-rust\\Cargo.toml"
+    ]
+}
