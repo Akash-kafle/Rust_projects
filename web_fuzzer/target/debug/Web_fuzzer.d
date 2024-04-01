@@ -1,0 +1,1 @@
+C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\web_fuzzer\target\debug\Web_fuzzer.exe: C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\web_fuzzer\src\main.rs

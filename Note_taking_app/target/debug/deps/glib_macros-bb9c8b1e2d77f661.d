@@ -1,0 +1,9 @@
+C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\Note_taking_app\target\debug\deps\glib_macros-bb9c8b1e2d77f661.dll: C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\lib.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gboxed_derive.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\genum_derive.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gflags_attribute.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\utils.rs
+
+C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\Note_taking_app\target\debug\deps\glib_macros-bb9c8b1e2d77f661.d: C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\lib.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gboxed_derive.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\genum_derive.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gflags_attribute.rs C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\utils.rs
+
+C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\lib.rs:
+C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gboxed_derive.rs:
+C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\genum_derive.rs:
+C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\gflags_attribute.rs:
+C:\Users\aakas\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glib-macros-0.10.1\src\utils.rs:

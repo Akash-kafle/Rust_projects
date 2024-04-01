@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #register-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="register-container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" name="register-username" required>
+            <br>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="register-password" required>
+            <br>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </div>
+
+    <script>
+        async function register() {
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+
+            const response = await fetch('http://127.0.0.1:8087/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            console.log(response);
+
+            if (response.ok) {
+                alert("Register successful");
+                window.location.href = 'http://127.0.0.1:8087/dashboard';
+            }
+            else {
+                alert('failed to register');
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

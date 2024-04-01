@@ -1,0 +1,8 @@
+[package]
+name = "Note_taking_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+druid = "0.8.3"
+tokio = "1.36.0"

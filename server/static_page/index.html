@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathmandu University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kathmandu University</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/maintenance">Report
+                    Maintenance</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="dashboard">
+            <!-- Maintenance tasks for each department will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script>// Dummy data for demonstration purposes
+
+
+        const maintenanceData = {
+            "Department of Computer Science and Engineering": ["Task1", "Task2"],
+            "Department of Geomatic Engineering": ["Task3", "Task4", "Task5"],
+            "Department of Chemical science and Engineering": [""],
+            "Department of Electrical and Electronics Engineering": [""],
+            "Department of Mechanical Engineering": [""],
+            "Department of Civil Engineering": [""],
+
+            // Add more departments and tasks as needed
+        };
+
+        // Function to populate the dashboard with maintenance tasks
+        function populateDashboard() {
+            const dashboardSection = document.getElementById("dashboard");
+
+            for (const department in maintenanceData) {
+                if (maintenanceData.hasOwnProperty(department)) {
+                    const tasks = maintenanceData[department];
+
+                    const departmentDiv = document.createElement("div");
+                    departmentDiv.classList.add("department");
+
+                    const departmentHeader = document.createElement("h2");
+                    departmentHeader.textContent = department;
+
+                    const tasksList = document.createElement("ul");
+
+                    tasks.forEach(task => {
+                        const taskItem = document.createElement("li");
+                        taskItem.textContent = task;
+                        tasksList.appendChild(taskItem);
+                    });
+
+                    departmentDiv.appendChild(departmentHeader);
+                    departmentDiv.appendChild(tasksList);
+
+                    dashboardSection.appendChild(departmentDiv);
+                }
+            }
+        }
+
+        // Call the function when the page is loaded
+        window.onload = populateDashboard;
+    </script>
+</body>
+
+</html>

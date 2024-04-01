@@ -1,0 +1,1 @@
+C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\Note_taking_app\target\debug\Note_taking_app.exe: C:\Users\aakas\OneDrive\Desktop\folders\programming\rust\Rust_projects\Note_taking_app\src\main.rs
