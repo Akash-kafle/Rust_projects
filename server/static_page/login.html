@@ -59,13 +59,14 @@
             <br>
             <button type="button" onclick="login()">Login</button>
         </form>
-        <a href="/register_page">Don't have an account? Register here</a>
+        <a href="/register">Don't have an account? Register here</a>
     </div>
 
     <script>
         async function login() {
             const username = document.getElementById('login-username').value;
             const password = document.getElementById('login-password').value;
+            const token = btoa(`${username}:${password}`);
 
             const response = await fetch('http://127.0.0.1:8087/login', {
                 method: 'POST',
