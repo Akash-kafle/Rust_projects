@@ -8,12 +8,12 @@ fn main() {
    main_connection();
 }
 
-async fn Check_end_points() {
+async fn check_end_points() {
             for i in 0..dictonary.len() {
-                match Connect_to_url(dictonary[i]).await {
+                match get_endpoints(dictonary[i]).await {
                     Ok(_) => {
                         println!("Connection successful");
-                        let endpoints = Get_endpoints(dictonary[i]).await;
+                        let endpoints = get_endpoints(dictonary[i]).await;
                         println!("Available endpoints for {}: {:?}", dictonary[i], endpoints);
                     },
                     Err(e) => {
@@ -23,7 +23,7 @@ async fn Check_end_points() {
             }
         }
 
-async fn Get_endpoints(url: &str) -> Result<Vec<String>, Box<dyn Error>> {
+async fn get_endpoints(url: &str) -> Result<Vec<String>, Box<dyn Error>> {
             let client = reqwest::Client::new();
             let res = client.get(url).send().await?;
             let body = res.text().await?;
@@ -32,22 +32,16 @@ async fn Get_endpoints(url: &str) -> Result<Vec<String>, Box<dyn Error>> {
         }
 
 fn parse_endpoints(body: &str) -> Vec<String> {
-            // Implement your logic to parse the endpoints from the HTML body
-            // and return them as a vector of strings
-            // Example:
-            // let mut endpoints = Vec::new();
-            // endpoints.push("/home");
-            // endpoints.push("/about");
-            // endpoints.push("/contact");
-            // endpoints
-            unimplemented!()
-        }
+    let mut endpoints = Vec::new();
+    let lines: Vec<&str> = body.lines().collect();
+    for line in lines {
+        if line.starts_with("Endpoint:") {
+            let endpoint = line.trim_start_matches("Endpoint:").trim();
+            endpoints.push(endpoint.to_string());
 
-async fn Connect_to_url(url: &str) -> Result<(), Box<dyn Error>> {
-    let client = reqwest::Client::new();
-    let res = client.get(url).send().await?;
-    println!("Status: {}", res.status());
-    Ok(())
+        }
+    }
+    endpoints
 }
 
 fn input_url() -> String {
@@ -59,7 +53,7 @@ fn input_url() -> String {
 
 async fn main_connection()-> i32{
     let url = input_url();
-    match Connect_to_url(&url).await {
+    match get_endpoints(&url).await {
         Ok(_) => {
             println!("Connection successful");
             return 1;
